@@ -1,5 +1,4 @@
-import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Linking } from "react-native";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { useNavigation, useRouter } from "expo-router";
 
@@ -22,7 +21,13 @@ export default function Footer() {
           style={styles.addbtn}
         />
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => router.push("/drivers")}>
+      <TouchableOpacity
+        onPress={() =>
+          Linking.openURL(
+            "https://cdn.botpress.cloud/webchat/v2.4/shareable.html?configUrl=https://files.bpcontent.cloud/2025/04/26/10/20250426104549-ER1XP4IC.json"
+          )
+        }
+      >
         <Ionicons name="chatbubble-outline" size={22} color="#fff" />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => router.push("/user")}>
@@ -38,11 +43,5 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     backgroundColor: "#105e41",
     paddingVertical: 12,
-  },
-  addbtn: {
-    backgroundColor: "#d4350d",
-    paddingHorizontal: 15,
-    paddingVertical: 5,
-    borderRadius: 50,
   },
 });
