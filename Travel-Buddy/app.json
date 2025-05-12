@@ -16,7 +16,8 @@
         "foregroundImage": "./assets/images/onebg.webp",
         "backgroundColor": "#fff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.hamid_hussain.TravelBuddy"
     },
     "web": {
       "bundler": "metro",
@@ -37,6 +38,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "8bd762c8-51df-48fa-9a94-b78c054b7aa4"
+      }
     }
   }
 }
